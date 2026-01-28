@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Your Pearl Gray background */
+  --background: #F3F4F6;
+  /* Your Jet Black text */
+  --foreground: #1A1A1A;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  /* This makes the text look sharp and high-end */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Rose-Gold Button (Pillar C) */
+.btn-rose {
+  background-color: #B5838D;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  transition: opacity 0.2s;
+}
+
+.btn-rose:hover {
+  opacity: 0.9;
+}
