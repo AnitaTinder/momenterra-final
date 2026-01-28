@@ -1,14 +1,15 @@
 import createMiddleware from 'next-intl/middleware';
  
 export default createMiddleware({
-  // The three languages from your blueprint
+  // Deine drei Sprachen
   locales: ['en', 'de', 'fr'],
- 
-  // If someone just types momenterra.de, show German first
-  defaultLocale: 'de'
+  // Standard ist Deutsch
+  defaultLocale: 'de',
+  // Das hilft Vercel, die Sprache besser zu finden
+  localePrefix: 'always'
 });
  
 export const config = {
-  // This tells the "Ghost" to watch all pages
-  matcher: ['/', '/(de|en|fr)/:path*']
+  // Dieser Bereich sagt dem Computer, welche Seiten er ignorieren soll (wie Bilder)
+  matcher: ['/((?!api|_next|.*\\..*).*)']
 };
